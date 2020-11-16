@@ -1,0 +1,145 @@
+{
+  "title": "前端知识",
+  "description": "一个小学生的学习笔记",
+  "author": "snoopy X",
+  "output.name": "site",
+  "language": "zh-hans",
+  "gitbook": "3.2.2",
+  "root": ".",
+  "structure": {
+    "readme": "README.md"
+  },
+  "styles": {
+    "website": "styles/style.css"
+  },
+  "links": {
+    "sidebar": {
+      "[GitHub]": "https://github.com/SnoopyoFifi",
+      "[网易云音乐]": "https://music.163.com/#/user/home?id=246533247"
+    }
+  },
+  "plugins": [
+    "-highlight",
+    "-lunr",
+    "-search",
+    "-livereload",
+    "-sharing",
+    "sharing-plus@0.0.2",
+    "search-plus@^0.0.11",
+    "simple-page-toc@^0.1.1",
+    "github@^2.0.0",
+    "github-buttons@2.1.0",
+    "edit-link@^2.0.2",
+    "-disqus@^0.1.0",
+    "prism@^2.1.0",
+    "-prism-themes@^0.0.2",
+    "advanced-emoji@^0.2.1",
+    "anchors@^0.7.1",
+    "include-codeblock@^3.0.2",
+    "ace@^0.3.2",
+    "emphasize@^1.1.0",
+    "-katex@^1.1.3",
+    "splitter@^0.0.8",
+    "-mermaid@^0.0.9",
+    "tbfed-pagefooter@^0.0.1",
+    "expandable-chapters-small@^0.1.7",
+    "sectionx@^3.1.0",
+    "local-video@^1.0.1",
+    "sitemap-general@^0.1.1",
+    "anchor-navigation-ex@0.1.8",
+    "favicon@^0.0.2",
+    "todo@^0.1.3",
+    "3-ba@^0.9.0",
+    "anchor-navigation-ex",
+    "copy-code-button",
+    "-book-summary-scroll-position-saver"
+  ],
+  "pluginsConfig": {
+    "github": {
+      "url": "https://github.com/SnoopyoFifi"
+    },
+    "github-buttons": {
+      "repo": "SnoopyoFifi/pupil",
+      "types": [
+        "star"
+      ],
+      "size": "small"
+    },
+    "include-codeblock": {
+      "template": "ace",
+      "unindent": true,
+      "edit": true
+    },
+
+    "sharing": {
+      "douban": true,
+      "facebook": false,
+      "google": true,
+      "hatenaBookmark": false,
+      "instapaper": false,
+      "line": false,
+      "linkedin": false,
+      "messenger": false,
+      "pocket": false,
+      "stumbleupon": false,
+      "twitter": false,
+      "viber": false,
+      "vk": false,
+      "qzone": true,
+      "qq": true,
+      "weibo": true,
+      "whatsapp": false,
+      "all": [
+        "douban", "qzone", "qq",
+        "weibo", "google"
+      ]
+    },
+    "tbfed-pagefooter": {
+      "copyright": "Copyright © SnoopyoFifi.com 2017",
+      "modify_label": "该文件修订时间：",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "3-ba": {
+      "token": "ff100361cdce95dd4c8fb96b4009f7bc"
+    },
+    "simple-page-toc": {
+      "maxDepth": 3,
+      "skipFirstH1": true
+    },
+    "edit-link": {
+      "base": "https://github.com/SnoopyoFifi/gitbook-use/edit/master",
+      "label": "Edit This Page"
+    },
+    "sitemap-general": {
+      "prefix": "https://github.com/SnoopyoFifi/"
+    },
+    "anchor-navigation-ex": {
+      "float": {
+        "showLevelIcon": true,
+        "level1Icon": "fa fa-fighter-jet",
+        "level2Icon": "fa fa-fighter-jet",
+        "level3Icon": "fa fa-fighter-jet"
+      }
+    },
+    "sectionx": {
+      "tag": "b"
+    },
+    "favicon": {
+      "shortcut": "favicon.ico",
+      "bookmark": "favicon.ico"
+    },
+    "prism": {
+      "css": [
+        "prismjs/themes/prism-solarizedlight.css"
+      ],
+      "lang": {
+        "flow": "typescript"
+      },
+      "ignore": [
+        "mermaid",
+        "eval-js"
+      ]
+    }
+
+  }
+}
