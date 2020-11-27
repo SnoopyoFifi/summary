@@ -1,5 +1,7 @@
 # JSBasic
 
+[JavaScript开发者应懂的33个概念](https://github.com/stephentian/33-js-concepts)
+
 ## JS执行机制
 
 - [浏览器是如何调度进程和线程的？](https://mp.weixin.qq.com/s/kSh600HxKYzb1ggtNZinTA)
@@ -10,7 +12,7 @@
 
 ## 执行上下文(Execution Context)
 
-- [Js 执行上下文和作用域(https://www.cnblogs.com/hai-cheng/p/11119632.html)
+- [Js 执行上下文和作用域](https://www.cnblogs.com/hai-cheng/p/11119632.html)
 - [深入理解JavaScript执行上下文和执行栈](https://segmentfault.com/a/1190000018550118)
 
 ### 执行上下文
@@ -27,10 +29,10 @@
 
 ### 执行上下文的生命周期
 
-> 执行上下文的生命周期包括三个阶段：创建阶段 -> 执行阶段 -> 回首阶段。
+> 执行上下文的生命周期包括三个阶段：创建阶段 -> 执行阶段 -> 回收阶段。
 
 - 创建阶段：当函数被调用，但未执行任何其内部代码之前
-  - 创建变量对象(`Variable Object`)
+  - 创建变量对象(`Variable Object`)·
   - 创建作用域链(`Scope Chain`)
   - 确定`this`指向
   
