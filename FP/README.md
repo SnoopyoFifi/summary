@@ -1,0 +1,4 @@
+- [函数式编程](http://www.xiaojichao.com/tag/函数式编程)
+- [这些高阶的函数技术，你掌握了么](https://mp.weixin.qq.com/s/XkdyuL_jywsiTc3Pvcpx-w)
+- [JavaScript 中的函数式编程：函数，组合和柯里化](https://mp.weixin.qq.com/s/dvhT0UPS9nc9cC5fS4x1YA)
+- [轻松玩转函数式编程](https://mp.weixin.qq.com/s/y_G6YSQkvWZpRP3XJmrIsA)

@@ -20,10 +20,12 @@
 
 * [设计模式](designMode/README.md)
 
-* [函数式编程](functionalProgramming/README.md)
-  * [高阶函数](functionalProgramming/HighOrderFunction.md)
-  * [柯里化](functionalProgramming/Curring.md)
-  * [函子](functionalProgramming/Functor.md)
+* [函数式编程](FP/README.md)
+  * [基础知识](FP/Basic.md)
+  * [高阶函数](FP/HOC.md)
+  * [柯里化](FP/Curring.md)
+  * [函子](FP/Functor.md)
+  * [单子](FP/Monad.md)
 
 * [性能优化](performanceOptimization/README.md)
 
@@ -40,6 +42,7 @@
 * [微前端](microFrontend/README.md)
 
 * [浏览器渲染](browserRendering/README.md)
+  * [浏览器进程与线程](browserRendering/browserProcesses&Threads.md)
 
 * [Node](node/README.md)
 

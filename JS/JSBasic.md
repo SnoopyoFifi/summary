@@ -7,6 +7,7 @@
 - [浏览器是如何调度进程和线程的？](https://mp.weixin.qq.com/s/kSh600HxKYzb1ggtNZinTA)
 - [js引擎的执行过程（一）](https://heyingye.github.io/2018/03/19/js%E5%BC%95%E6%93%8E%E7%9A%84%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B%EF%BC%88%E4%B8%80%EF%BC%89/)
 - [JavaScript 是如何运行的？](https://blog.fundebug.com/2019/09/26/how-does-javascript-execute/)
+- [这一次，彻底弄懂 JavaScript 执行机制](https://juejin.cn/post/6844903512845860872)
 
 > js是单线程的，异步执行的，通过事件循环(Event Loop)的方式解析代码。
 
