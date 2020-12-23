@@ -18,10 +18,15 @@
 
 * [Webpack](webpack/README.md)
 
-* [设计模式](designMode/README.md)
+* [设计模式](designParttens/README.md)
+  * [单例模式](designParttens/Singleton.md)
+  * [模块模式](designParttens/Module.md)
+  * [观察者模式](designParttens/Observer.md)
+  * [发布订阅模式](designParttens/PublishSubscribe.md)
 
 * [函数式编程](FP/README.md)
   * [基础知识](FP/Basic.md)
+  * [组合函数](FP/Composition.md)
   * [高阶函数](FP/HOC.md)
   * [柯里化](FP/Curring.md)
   * [函子](FP/Functor.md)
