@@ -61,3 +61,4 @@
 ## **参考文章和书籍**
 
 - [JS 设计模式](https://set.sh/post/180612-js-design-pattern)
+- [深入理解 JavaScript 模块模式](https://blog.crimx.com/2014/08/05/javascript-module-pattern-in-depth/)

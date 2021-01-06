@@ -2,15 +2,69 @@
 
 ## 概述
 
-> 口诀：**主体对象、观察者**
+  > 口诀：**发布者、topic/event channel、订阅者**
 
 - 定义：
 - 应用场景：
-- 实现思路：
+- 实现思路：发布/订阅模式是观察者模式的变种。其实现了一个主体/事件通道，用于发布者和订阅者之间的通信，以解耦发布者和订阅者。
 
 ## 具体实现
 
-```js
+  ```js
+class Pub {
+  constructor() {
+    this.caches = [];
+
+    Reflect.defineProperty(this, '_uid', {
+      enumerable: false,
+      writable: true,
+      value: -1,
+    })
+  }
+
+  publish(evt, ...args) {
+    if(!this.caches[evt]) return false;
+
+    const subscription = this.caches[evt];
+    let len = subscribers ? subscribers.length : 0;
+    while(len--) {
+      subscribers[len].callback.apply(subscribers[len], args);
+    }
+
+    return this;
+  }
+
+  subscribe(evt, callback) {
+    if(!this.caches[evt]) this.caches[evt] = [];
+
+    this.caches[evt].push({
+      uid: ++this._uid,
+      callback
+    })
+  }
+
+  unsubscribe(evt, uid) {
+    const cache = this.caches[evt];
+    const len = this.caches[evt].length;
+
+    for(let i = 0; i < len; i++) {
+      if (cache[i].uid === uid) {
+        return cache[i].splice(i, 1);
+      }
+    }
+
+    return this;
+  }
+}
+
+const pub = new Pub();
+
+pub.subscribe('snoopy', () => console.log('snoopy say hi'));
+pub.subscribe('fifi', () => console.log('fifi say hi'));
+
+pub.publish('snoopy');
+pub.publish('fifi');
+
 const Event = (function() {
   let clientList = {};
   let listen = null;
@@ -139,12 +193,12 @@ sub.addObserver(obs);
 
 sub.notify();
 sub.removeObserver(obs);
-```
+  ```
 
 ## 具体应用
 
-> 
+  > 
 
 ## **参考文章和书籍**
 
-- [JS 设计模式](https://set.sh/post/180612-js-design-pattern)
+- [JS 设计模式 - 观察者模式](https://set.sh/post/180612-js-design-pattern#观察者模式)
