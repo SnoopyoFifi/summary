@@ -193,7 +193,7 @@ sub.addObserver(obs);
 
 sub.notify();
 sub.removeObserver(obs);
-  ```jssss
+  ```
 
 ## 具体应用
 

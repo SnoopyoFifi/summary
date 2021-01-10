@@ -10,7 +10,7 @@
 
 ## 具体实现
 
-```jssss
+```js
   // 常规使用
   const myModule = (function() {
     let privateVar = 0;
@@ -52,7 +52,7 @@
     return exports;
   })();
 
-```jssss
+```
 
 ## 具体应用
 

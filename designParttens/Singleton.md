@@ -89,7 +89,7 @@
       }
     })()
   }
-  ```jssss
+  ```
 
 - 透明的单例模式
 
@@ -120,7 +120,7 @@
 
   let snoopy = new Singleton('snoopy');
   let fifi = new Singleton('fifi');
-  ```jssss
+  ```
   
 - 代理实现单例模式
   
@@ -148,7 +148,7 @@
   
   let snoopy = new ProxySingletonCreateDiv('snoopy');
   let fifi = new ProxySingletonCreateDiv('fifi');
-  ```jssss
+  ```
 
 - **惰性单例模式(通用单例模式)**
 
@@ -172,7 +172,7 @@
   
   let loginLayer = createSingleIframe('iframe');
   loginLayer.src = 'http://baidu.com';
-  ```jssss
+  ```
 
 - 使用`Proxy API`实现
   
@@ -203,7 +203,7 @@
   myObj.printMsg();
   const myObj2 = new MySingletonClass('second');
   myObj.printMsg();
-  ```jssss
+  ```
 
 ## 具体应用
 
@@ -234,7 +234,7 @@
       return cache[key] || (cache[key] = fn.apply(fn, args))
     }
   }
-  ```jssss
+  ```
 
 ## **参考文章和书籍**
 

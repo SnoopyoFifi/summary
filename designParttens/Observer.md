@@ -10,7 +10,7 @@
 
 ## 具体实现
 
-```jssss
+```js
 const Event = (function() {
   let clientList = {};
   let listen = null;
@@ -139,7 +139,7 @@ sub.addObserver(obs);
 
 sub.notify();
 sub.removeObserver(obs);
-```jssss
+```
 
 ## 具体应用
 
