@@ -23,6 +23,7 @@
   * [模块模式](designParttens/Module.md)
   * [观察者模式](designParttens/Observer.md)
   * [发布订阅模式](designParttens/PublishSubscribe.md)
+  * [发布订阅模式](designParttens/PublishSubscribe.md)
 
 * [函数式编程](FP/README.md)
   * [基础知识](FP/Basic.md)
@@ -34,8 +35,6 @@
 
 * [性能优化](performanceOptimization/README.md)
 
-* [代码片段](codeSnippet/README.md)
-
 * [TypeScript](typeScript/README.md)
 
 * [canvas](canvas/README.md)
@@ -43,9 +42,21 @@
 * [svg](svg/README.md)
 
 * [pwa](pwa/README.md)
+  * [serviceWorker](pwa/serviceWorker.md)
+  * [cacheStorageApi](pwa/cacheStorageApi.md)
+  * [cacheStrategy](pwa/cacheStrategy.md)
   * [indexDB](pwa/indexDB.md)
+  * [postMessage](pwa/postMessage.md)
+  * [notification](pwa/indexDB.md)
+  * [offlinePlugin](pwa/offlinePlugin.md)
+  * [others](pwa/others.md)
 
 * [微前端](microFrontend/README.md)
+  * [singleSpa](microFrontend/singleSpa.md)
+  * [systemJS](microFrontend/systemJS.md)
+  * [others](microFrontend/others.md)
+
+* [代码片段](codeSnippet/README.md)
 
 * [浏览器渲染](browserRendering/README.md)
   * [浏览器进程与线程](browserRendering/browserProcesses&Threads.md)

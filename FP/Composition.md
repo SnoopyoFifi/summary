@@ -10,7 +10,7 @@
 
 ## `partials`
 
-```js
+```jssss
   // function partial() {
   //   let fn = this,
   //   boundArgs = Array.prototype.slice.call(arguments);
@@ -25,11 +25,11 @@
   //     while(position < argumen)
   //   }
   // }
-```
+```jssss
 
 ## `compose`
 
-```js
+```jssss
   // [JavaScript 函数式编程指南] - 93
   function compose(/* fns */) {
     let args = arguments;
@@ -80,5 +80,5 @@
 
   // koa - https://github.com/koajs/compose/blob/master/index.js
   
-```
+```jssss
 
