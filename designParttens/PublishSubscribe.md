@@ -2,7 +2,7 @@
 
 ## 概述
 
-  > 口诀：**发布者、topic/event channel、订阅者**
+> 口诀：**发布者、topic/event channel、订阅者**
 
 - 定义：
 - 应用场景：
