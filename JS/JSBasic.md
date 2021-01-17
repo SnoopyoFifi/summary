@@ -83,6 +83,8 @@
 
 ## 原型
 
+## 垃圾回收
+
 ## **参考文章和书籍**
 
 - [深入理解 JavaScript 作用域和作用域链(https://blog.fundebug.com/2019/03/15/understand-javascript-scope/)·

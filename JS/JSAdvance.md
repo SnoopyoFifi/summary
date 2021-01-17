@@ -11,3 +11,15 @@
 ## `Array.prototype.reduce`
 
 ## `Object.prototype.toString`
+
+## `requestAnimationFrame`
+
+## `requestIdleCallback`
+
+## dragApi
+
+## FileApi
+
+## BlobAPi
+
+## webComponents
