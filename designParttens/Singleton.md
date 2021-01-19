@@ -243,3 +243,8 @@
 - [Javascript缓存函数&柯里化&偏函数](https://zhuanlan.zhihu.com/p/112505577)
 - [How can I implement a singleton in JavaScript?](https://www.30secondsofcode.org/blog/s/javascript-singleton-proxy)
 - [Learning JavaScript Design Patterns](https://set.sh/post/180612-js-design-pattern#单例模式)
+- [深入理解 JavaScript 模块模式](https://blog.crimx.com/2014/08/05/javascript-module-pattern-in-depth/)
+- 《Javascript 设计模式与开发实践》
+
+- [设计模式： 从ES5 到 TypeScript ——单例模式](https://github.com/Pines-Cheng/blog/issues/64)
+- [es6-design-patterns](https://loredanacirstea.github.io/es6-design-patterns/)
