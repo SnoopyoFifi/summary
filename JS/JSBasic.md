@@ -81,6 +81,14 @@
 
 ### `call/apply/bind`
 
+- `bind`第一个传`null`则不改变`this`指向，且可在后续调用中续传参数。
+
+```js
+  const fn = (a, b) => (a + b);
+  const func = fn.bind(null, 1);
+  func(2);
+```
+
 ## 原型
 
 ## 垃圾回收

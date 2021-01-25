@@ -30,6 +30,13 @@
 ## `compose`
 
 ```js
+  cosnt compose = (...fns) => x => fns.reduceRight((y, f) => f(y), x);
+  const pipe = (...fns) => x => fns.reduce((y, f) => f(y), x);
+
+
+  // compose :: ((y -> z), (x -> y), ..., (a -> b)) -> a -> z
+  const compose = (...fns) => (...args) => fns.reduceRight((res, fn) => [fn.call(null, ...res)], args)[0];
+
   // [JavaScript 函数式编程指南] - 93
   function compose(/* fns */) {
     let args = arguments;
@@ -82,3 +89,6 @@
   
 ```
 
+## 延伸阅读
+
+- [mostly-adequate-guide](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/appendix_a.md)
