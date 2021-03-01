@@ -32,3 +32,10 @@
 
 - 设计模式思想及如何在代码中体现的
 - 类似`react/vue`框架、`jquer/lodash`库以及`Bootstrap/AntD`ui框架中应用到哪些设计模式。
+
+## 延伸阅读
+
+- [JavaScript Design Patterns](https://betterprogramming.pub/javascript-design-patterns-25f0faaaa15)
+- [7 JavaScript Design Patterns Every developer should know](https://codesource.io/javascript-design-patterns/)
+
+- [](https://www.bilibili.com/video/BV11K4y1H79F?from=search&seid=7830658309684928407)

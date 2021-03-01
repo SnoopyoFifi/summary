@@ -49,3 +49,6 @@
 - [轻松玩转函数式编程](https://mp.weixin.qq.com/s/y_G6YSQkvWZpRP3XJmrIsA)
 - [js函数式编程术语总结](http://www.fly63.com/article/detial/2097)
 - [函数式编程](http://www.xiaojichao.com/tag/函数式编程)
+- [Functional-Light-JS](https://github.com/getify/Functional-Light-JS)
+- [FPO](https://github.com/getify/FPO)
+- [](https://juejin.cn/user/2242659449052824/posts)
