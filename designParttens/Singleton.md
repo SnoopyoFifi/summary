@@ -89,6 +89,24 @@
       }
     })()
   }
+
+  class Singleton {
+    // 定义私有的静态属性，来保存对象实例
+    private static singleton;
+    private constructor() {};
+
+    // 提供一个静态的方法来获取对象实例
+    public static getInstance() {
+      if (!Singleton.singleton) {
+        Singleton.singleton = new Singleton();
+      }
+      return Singleton.singleton;
+    }
+  }
+
+  let instance1 = Singleton.getInstance();
+  let instance2 = Singleton.getInstance();
+  console.log(instance1 === instance2);
   ```
 
 - 透明的单例模式

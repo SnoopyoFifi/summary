@@ -4,8 +4,8 @@
 
 > 口诀：**发布者、topic/event channel、订阅者**
 
-- 定义：
-- 应用场景：
+- 定义：在软件架构中，发布/订阅是一种消息范式，消息的发送者（称为发布者）不会将消息直接发送给特定的接收者（称为订阅者）。而是将发布的消息分为不同的类别，然后分别发送给不同的订阅者。同样的，订阅者可以表达对一个或多个类别的兴趣，只接收感兴趣的消息，无需了解哪些发布者存在。
+- 应用场景：对象间存在一对多关系，一个对象的状态发生改变会影响其他对象。作为事件总线，来实现不同组件间或模块间的通信。
 - 实现思路：发布/订阅模式是观察者模式的变种。其实现了一个主体/事件通道，用于发布者和订阅者之间的通信，以解耦发布者和订阅者。
 
 ## 具体实现
@@ -193,7 +193,65 @@ sub.addObserver(obs);
 
 sub.notify();
 sub.removeObserver(obs);
-  ```
+
+
+class EventEmitter {
+  private c = new Map();
+
+  // 订阅指定的主题
+  subscribe(topic, ...hanlers) {
+    let topics = this.c.get(topic);
+    if (!topics) {
+      this.c.set(topic, topics = []);
+    }
+    topics.push(...handlers);
+  }
+
+  // 取消订阅指定的主题
+  unsubscribe(topic, handlers) {
+    if (!handler) {
+      return this.c.delete(topic);
+    }
+
+    const topics = this.c.get(topic);
+    if (!topics) {
+      return false;
+    }
+
+    const index = topics.indexOf(hanlder);
+
+    if (index < 0) {
+      return false;
+    }
+    topics.splices(index, 1);
+    if (topics.length === 0) {
+      this.c.delete(topic);
+    }
+    return true;
+  }
+
+  // 为指定的主题发布消息
+  publish(topic, ...args) {
+    const topics = this.c.get(topic);
+    if(!topic) {
+      return null;
+    }
+    return topics.map(handler => {
+      try {
+        return handler(...args);
+      } catch(e) {
+        console.error(e);
+        return null;
+      }
+    })
+  }
+}
+
+const eventEmitter = new EventEmitter();
+eventEmitter.subscribe("ts", (msg) =>console.log(`收到订阅的消息：${msg}`) );
+eventEmitter.publish("ts", "TypeScript发布订阅模式");
+eventEmitter.unsubscribe("ts");eventEmitter.publish("ts", "TypeScript发布订阅模式");
+```
 
 ## 具体应用
 
