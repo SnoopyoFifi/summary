@@ -128,3 +128,5 @@
   * [代码片段](others/codeSnippet.md)
   * [正则表达式](others/regex.md)
   * [移动端](others/mobile.md)
+  * [高频面试题](others/interviewQuestions.md)
+

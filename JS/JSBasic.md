@@ -11,6 +11,8 @@
 
 > js是单线程的，异步执行的，通过事件循环(Event Loop)的方式解析代码。
 
+## 线程与进程
+
 ## 执行上下文(Execution Context)
 
 - [Js 执行上下文和作用域](https://www.cnblogs.com/hai-cheng/p/11119632.html)
@@ -95,4 +97,4 @@
 
 ## **参考文章和书籍**
 
-- [深入理解 JavaScript 作用域和作用域链(https://blog.fundebug.com/2019/03/15/understand-javascript-scope/)·
+- [深入理解 JavaScript 作用域和作用域链](https://blog.fundebug.com/2019/03/15/understand-javascript-scope/)
