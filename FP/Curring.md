@@ -82,6 +82,19 @@
   const greet = (greeting, name) => greeting + ' ' + name + '!';
   const greetHello = partial(greet, 'Hello');
   greetHello('John'); // 'Hello John!'
+
+  // 🦏  7 - 290
+  function partial(f, ...outerArgs) {
+    return function(...innerArgs) {
+      let args = [...outerArgs];
+      let innerIndex = 0;
+      for(let i = 0; i < args.length) {
+        if (args[i] === undefined) args[i] = innerArgs[innerIndex++];
+      }
+      args.push(...innerArgs.slice(innerIndex));
+      return f.apply(this, args);
+    }
+  }
 ```
 
 ## 反柯里化(`Uncurring`)
