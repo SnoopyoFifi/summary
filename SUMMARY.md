@@ -111,6 +111,7 @@
 * [数据结构](dataStructure/README.md)
 
 * [算法](algorithm/README.md)
+  * [排序算法](algorithm/sortAlgorithm.md)
 
 * [趋势](trend/README.md)
   * [TypeScript](trend/typeScript.md)
