@@ -55,14 +55,25 @@
     }
   }
 
-  // ESNext
+  // 30secondsofcode
   const curry = (fn, arity = fn.length, ...args) =>
     arity <= args.length ? fn(...args) : curry.bind(null, fn, arity, ...args);
 
-  // EXAMPLES
+  // Examples
   curry(Math.pow)(2)(10); // 1024
   // 如果想curry一个接受可变数量参数的函数(可变参数函数，例如Math.min())，可以选择将参数的数量传递给第二个形参。
   curry(Math.min, 3)(10)(50)(2); // 2
+  
+  const uncurry = (fn, n = 1) => (...args) => {
+    const next = acc => args => args.reduce((x, y) => x(y), acc);
+    if (n > args.length) throw new RangeError('Arguments too few!');
+    return next(fn)(args.slice(0, n));
+  };
+
+  // Examples
+  const add = x => y => z => x + y + z;
+  const uncurriedAdd = uncurry(add, 3);
+  uncurriedAdd(1, 2, 3); // 6
 ```
 
 ## 偏函数(`Partial Application`)

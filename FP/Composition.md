@@ -30,12 +30,38 @@
 ## `compose`
 
 ```js
-  cosnt compose = (...fns) => x => fns.reduceRight((y, f) => f(y), x);
+  const compose = (...fns) => x => fns.reduceRight((y, f) => f(y), x);
   const pipe = (...fns) => x => fns.reduce((y, f) => f(y), x);
 
 
   // compose :: ((y -> z), (x -> y), ..., (a -> b)) -> a -> z
   const compose = (...fns) => (...args) => fns.reduceRight((res, fn) => [fn.call(null, ...res)], args)[0];
+
+  // 30secondsofcode
+  const compose = (...fns) => fns.reduce((f, g) => (..args) => f(g(...args)));
+
+  // Examples
+  const add5 = x => x + 5;
+  const multiply = (x, y) => x * y;
+  const multiplyAndAdd5 = compose(
+    add5,
+    multiply
+  );
+  multiplyAndAdd5(5, 2); // 15
+
+  // 30secondsofcode
+  const pipe = (...fns) => fns.reduce((f, g) => (..。args) => g(f(...args)));
+  const pipeAsyncFunctions = (...fns) => arg => fns.reduce((p, f) => p.then(f), Promise.resolve(arg));
+
+  const sum = pipeAsyncFunctions(
+    x => x + 1,
+    x => new Promise(resolve => setTimeout(() => resolve(x + 2), 1000)),
+    x => x + 3,
+    async x => (await x) + 4
+  );
+  (async() => {
+    console.log(await sum(5)); // 15 (after one second)
+  })();
 
   // [JavaScript 函数式编程指南] - 93
   function compose(/* fns */) {

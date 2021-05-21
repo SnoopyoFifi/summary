@@ -89,6 +89,46 @@
   const fn = (a, b) => (a + b);
   const func = fn.bind(null, 1);
   func(2);
+
+  const call = (key, ...args) => context => context[key](...args);
+
+  // Examples
+  
+  Promise.resolve([1, 2, 3])
+    .then(call('map', x => 2 * x))
+    .then(console.log); // [ 2, 4, 6 ]
+  const map = call.bind(null, 'map');
+  Promise.resolve([1, 2, 3])
+    .then(map(x => 2 * x))
+    .then(console.log); // [ 2, 4, 6 ]
+
+
+  const bind = (fn, context, ...boundArgs) => (...args) =>
+    fn.apply(context, [...boundArgs, ...args]);
+  
+  // Examples
+
+  function greet(greeting, punctuation) {
+    return greeting + ' ' + this.user + punctuation;
+  }
+  const freddy = { user: 'fred' };
+  const freddyBound = bind(greet, freddy);
+  console.log(freddyBound('hi', '!')); // 'hi fred!'
+
+
+  const bindKey = (context, fn, ...boundArgs) => (...args) =>
+  context[fn].apply(context, [...boundArgs, ...args]);
+  
+  // Examples
+
+  const freddy = {
+    user: 'fred',
+    greet: function(greeting, punctuation) {
+      return greeting + ' ' + this.user + punctuation;
+    }
+  };
+  const freddyBound = bindKey(freddy, 'greet');
+  console.log(freddyBound('hi', '!')); // 'hi fred!'
 ```
 
 ## 原型
